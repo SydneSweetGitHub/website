@@ -1,41 +1,80 @@
 <html>
   <head>
-    <title>Hello, world!</title>
+      <link href="https://fonts.googleapis.com/css?family=Be+Vietnam&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+    <title>Random Croissant Website</title>
     <!-- "style" changes how your web page LOOKS like -->
     <style>
       body {
         font-family: Arial, Helvetica, sans-serif;
-      }
-      .name1 {
-        color: MediumVioletRed;
+        background-image: url("https://i.stack.imgur.com/poux8.gif")
+              }
+      .name1{
+        color: rgb(247, 146, 210);
       }
       .name2 {
-        color: LightSeaGreen;
+        color: lightslategray      }
+      #greeting{
+        font-family: 'Be Vietnam', sans-serif;
+      }
+      #cool{
+        font-family: 'Rubik', sans-serif;
       }
     </style>
     <!-- "script" changes what your web page DOES -->
     <script>
       let greetings = [
-        "Hello, world!",    // english
-        "Hola, Mundo!",     // spanish
-        "Salamu, Dunia!",   // swahili
-        "Bonjour le monde!" // french
+        "Wassup Peeps!",    // english
+        "Have a great croissant",     // spanish
+        "Croissants everywhere",   // swahili
+        "There's no real reason for this but y'know, croissant!" // french
       ]
       let greetingsIdx = 0
       function changeMessage(greetingElement) {
         greetingsIdx = greetingsIdx + 1
         greetingElement.innerText = greetings[greetingsIdx]
+        if (greetingsIdx >= 3) {
+          greetingsIdx = 0
+        }
+      }
+      let images = [
+      "https://cdn.apartmenttherapy.info/image/fetch/f_auto,q_auto:eco/https%3A%2F%2Fstorage.googleapis.com%2Fgen-atmedia%2F3%2F2011%2F02%2F680526c1887f5abbdb7313318d6c6d45af98a81c.jpeg",      
+        "https://media.newyorker.com/photos/590974702179605b11ad8096/master/w_727,c_limit/Gopnik-TheMurkyMeaningsofStraightenedOutCroissants.jpg",        
+        "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fcdn-image.myrecipes.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Fmedium_2x%2Fpublic%2Ffield%25252Fimage%25252Fovernight-croissant-breakfast-bake.jpg%3Fitok%3De9YV5aHv&w=450&c=sc&poi=face&q=85",        
+        "https://tornadoughalli.com/wp-content/uploads/2019/03/BREAKFAST-SANDWICHES2.jpg",        
+        "https://www.biggerbolderbaking.com/wp-content/uploads/2015/12/BBB104-Chocolate-Croissants-Thumbnail-v.4.jpg",        
+        "https://www.chicagotribune.com/resizer/6AEYM_9yc-FHYEc5U-NV1MBGlv8=/800x449/top/www.trbimg.com/img-5cae8c75/turbine/ct-1554943091-5xgbinucrc-snap-image",        
+        "https://www.womanscribbles.net/wp-content/uploads/2017/07/cream-cheese-croissants-7.jpg"
+      ]
+
+      let imagesIdx = 0
+      function changeImage (element) {
+       imagesIdx = imagesIdx + 1 
+       element.src = images[imagesIdx]
+       if(imagesIdx >= 6){
+         imagesIdx = 0
+       }
       }
     </script>
   </head>
   <!-- "body" lists what your web page CONTAINS -->
   <body>  
-    <h1 id="greeting" onClick="changeMessage(this)">Hello, world!</h1>
-    <p>
-      by
-      <span class="name1">NAME_1</span>
+    <h1 id="greeting" onClick="changeMessage(this)">Wassup Peeps!</h1>
+    <p id="cool">
+      Created by
+      <span class="name1">Sydne</span>
       and
-      <span class="name2">NAME_2</span>
+      <span class="name2">Nia</span>
+      (Lol Sydne had a croissant this morning) 
+
+      Sponsored by your Mother
+       
     </p>
+    <p>
+      <img onClick="changeImage(this)" src="https://keyassets-p2.timeincuk.net/wp/prod/wp-content/uploads/sites/53/2013/01/Croissant.jpg" width="900">
+    
+    </p>
+
+
   </body>
 </html>
