@@ -1,6 +1,6 @@
 # Introduction
 
-This is the source code repository for your website.
+This is the source code repository for your website.Just simply put it on ur webpage to make it better.
 
 # Challenges
 
